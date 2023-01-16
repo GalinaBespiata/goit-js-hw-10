@@ -27,7 +27,7 @@ function onInputHandler(event) {
     .then(chosenCountries => {
       if (chosenCountries.length === 1) {
         countryWrap.style.display = 'none';
-        console.log(chosenCountries);
+      
         renderCountry(chosenCountries);
       } else if (chosenCountries.length >= 10) {
         Notify.info(
@@ -48,7 +48,7 @@ function onInputHandler(event) {
 function renderCountry(chosenCountries) {
   markup = chosenCountries
     .map(({name, flags, capital, population, languages}) => {
-      console.log(name)
+      
       return `<div class="country"><img src="${flags.png}" height="30" width="30" alt="${name}"><h2 class="js-nameCountry">${name.official}</h2></div>
         <p class="js-propCountry"><span class="text">Capital: </span>${capital}</p>
         <p class="js-propCountry"><span class="text">Population: </span>${population}</p>
