@@ -26,7 +26,7 @@ function onInputHandler(event) {
   fetchCountries(country)
     .then(chosenCountries => {
       if (chosenCountries.length === 1) {
-        countryWrap.style.display = 'none';
+        countryWrap.innerHTML = '';
 
         renderCountry(chosenCountries);
       } else if (chosenCountries.length >= 10) {
@@ -35,13 +35,13 @@ function onInputHandler(event) {
         );
       } else {
         getCountriesList(chosenCountries);
-        countryWrap.style.display = 'block';
+        countryInfo.innerHTML = '';
         const textEl = document.querySelector('.js-nameCountry');
-        textEl.style.margin = '0px';
+        
       }
     })
     .catch(error => {
-      console.log('error');
+      Notify.failure('Error');
     });
 }
 

@@ -5,7 +5,7 @@ export function fetchCountries(name) {
     `https://restcountries.com/v3.1/name/${name}?fields=name,capital,flags,population,languages`
   ).then(response => {
     if (!response.ok) {
-      Notify.failure('Oops, there is no country with that name');
+      throw new Error(response.statusText);
     } else {
       return response.json();
     }
