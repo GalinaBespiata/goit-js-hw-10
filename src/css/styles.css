@@ -16,5 +16,38 @@ body {
   font: inherit;
   padding: 8px;
   max-width: 320px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
+  margin-left: 40px;
 }
+p{
+  margin: 0px;
+}
+ul{
+  display: flex;
+  column-gap: 10px;
+  flex-direction: column;
+  margin-top: 0;
+}
+li{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 0;
+}
+.text{
+  font-weight: 700;
+ 
+}
+.js-propCountry{
+  margin-top: 20px;
+}
+.country{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.country-info{
+  display: block;
+  margin-left: 40px;
+}
+
